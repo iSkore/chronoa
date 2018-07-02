@@ -1,14 +1,66 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="mainView" no-bounce>
+	<div class="top-group">
+		<ion-row>
+			<ion-col>
+				<button class="btn-block"
+						ion-button large icon-only outline
+						color="light"
+						(click)="openCreatorPage('timer')">
+					<ion-icon name='ios-alarm-outline'></ion-icon>
+				</button>
+			</ion-col>
+			<ion-col>
+				<button class="btn-block"
+						ion-button large icon-only outline
+						color="light"
+						(click)="openCreatorPage()">
+					<ion-icon name='ios-calendar-outline'></ion-icon>
+				</button>
+			</ion-col>
+			<ion-col>
+				<button class="btn-block"
+						ion-button large icon-only outline
+						color="light"
+						(click)="openCreatorPage()">
+					<ion-icon name='ios-repeat-outline'></ion-icon>
+				</button>
+			</ion-col>
+		</ion-row>
+	</div>
+
+	<div class="bottom-group">
+		<ion-row>
+			<ion-col>
+				<ion-icon name="ionic" color="primary"></ion-icon>
+			</ion-col>
+			<ion-col>
+				<ion-icon name="cloud"></ion-icon>
+			</ion-col>
+			<ion-col>
+				<ion-icon name="sunny" color="bright"></ion-icon>
+			</ion-col>
+			<ion-col>
+				<ion-icon name="umbrella"></ion-icon>
+			</ion-col>
+			<ion-col>
+				<ion-icon name="rainy" color="primary"></ion-icon>
+			</ion-col>
+			<ion-col>
+				<ion-icon name="ionic" color="secondary"></ion-icon>
+			</ion-col>
+			<ion-col>
+				<ion-icon name="arrow-dropup-circle" color="vibrant"></ion-icon>
+			</ion-col>
+			<ion-col>
+				<ion-icon name="umbrella"></ion-icon>
+			</ion-col>
+			<ion-col>
+				<ion-icon name="ionic" color="danger"></ion-icon>
+			</ion-col>
+		</ion-row>
+	</div>
+
 </ion-content>

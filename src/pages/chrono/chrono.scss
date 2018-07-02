@@ -1,0 +1,87 @@
+page-home {
+	$radius: 80px;
+	$stroke-width: 5px; // if instead of a donut, you want to achieve a full pie, set this value to half the size of $radius
+	$mask-color: rgb(7, 33, 61);
+	$highlight-color: rgb(255, 0, 61);
+	$alert-color: #FFB800;
+
+	// box sizing to border-box to facilitate border width calculations
+	*, *::after {
+		box-sizing: border-box;
+	}
+
+	// a smart background color for the body...
+	body {
+		background-color: #19405F;
+	}
+	// a center-inside-everything class...
+	.center {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+	}
+
+	/**
+     * Timer-related classes
+     */
+
+	// a placeholder to describe a half-container, vertically speaking...
+	%timer-semi {
+		position: absolute;
+		overflow: hidden;
+		width: $radius/2;
+		height: $radius;
+	}
+
+	// the main container, just encloses the whole circle
+	.timer-container {
+		width: $radius;
+		height: $radius;
+	}
+
+	// half-vertical container, that encloses semi-circles
+	.timer-semi-container {
+		@extend %timer-semi;
+		// shift this one to the right
+		&.right {
+			left: $radius/2;
+		}
+		// shift the semi-circle inside the left one, to the right, too
+		&.left .timer-semi-circle {
+			left: $radius/2;
+		}
+	}
+
+	// this one is used as a mask for semi-circles,
+	// which are drawn using ::after pseudo-element
+	.timer-semi-circle {
+		@extend %timer-semi;
+		// set transformations origin here
+		-webkit-transform-origin: 0;
+		// the circle itself
+		&::after {
+			content: "";
+			position: absolute;
+			left: -$radius/2;
+			width: $radius;
+			height: $radius;
+			// styles for border
+			border: $stroke-width solid $mask-color;
+			border-radius: 50%;
+			-webkit-transition: border-color .2s linear;
+		}
+		// the highlighting color
+		&.highlighted::after {
+			border-color: $highlight-color;
+		}
+		// and an "alert" state
+		&.highlighted.alert::after {
+			border-color: $alert-color;
+		}
+		// a way to get semi-circles opposed to each other
+		&.mirrored {
+			-webkit-transform: rotate(180deg);
+		}
+	}
+}
