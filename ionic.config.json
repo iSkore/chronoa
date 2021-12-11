@@ -1,8 +1,0 @@
-{
-  "name": "Chronoa",
-  "app_id": "58aff732",
-  "type": "ionic-angular",
-  "integrations": {
-    "cordova": {}
-  }
-}
