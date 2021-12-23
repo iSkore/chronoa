@@ -1,9 +1,9 @@
 {
-    "name": "template-vue-dashboard",
+    "name": "chronoa",
     "version": "1.0.6",
     "private": true,
-    "description": "Basic vue dashboard",
-    "author": "MI-SEC",
+    "description": "Basic timer clock for working out or other activities",
+    "author": "Nick Soggin",
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build --mode production",
@@ -59,9 +59,9 @@
         "last 2 versions"
     ],
     "bugs": {
-        "url": "https://github.com/mi-sec/template-vue-dashboard/issues"
+        "url": "https://github.com/iskore/chronoa/issues"
     },
-    "homepage": "https://github.com/mi-sec/template-vue-dashboard#readme",
+    "homepage": "https://github.com/iskore/chronoa#readme",
     "keywords": [
         "vue",
         "dashboard",
@@ -70,6 +70,6 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/mi-sec/template-vue-dashboard.git"
+        "url": "git+https://github.com/iskore/chronoa.git"
     }
 }

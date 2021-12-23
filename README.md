@@ -1,16 +1,16 @@
-# template-vue-dashboard
+# chronoa
 
-[![Website mi-sec.github.io](https://img.shields.io/website-up-down-green-red/https/mi-sec.github.io/template-vue-dashboard.svg)](https://mi-sec.github.io/template-vue-dashboard/)
+[![Website iskore.github.io](https://img.shields.io/website-up-down-green-red/https/iskore.github.io/chronoa.svg)](https://iskore.github.io/chronoa/)
 
-[![Generate GitHub Pages Example](https://github.com/mi-sec/template-vue-dashboard/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/mi-sec/template-vue-dashboard/actions/workflows/gh-pages.yml)
+[![Generate GitHub Pages Example](https://github.com/iskore/chronoa/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/iskore/chronoa/actions/workflows/gh-pages.yml)
 
 Testing:
 
-[![ESLint Test](https://github.com/mi-sec/template-vue-dashboard/actions/workflows/lint.yml/badge.svg)](https://github.com/mi-sec/template-vue-dashboard/actions/workflows/lint.yml)
+[![ESLint Test](https://github.com/iskore/chronoa/actions/workflows/lint.yml/badge.svg)](https://github.com/iskore/chronoa/actions/workflows/lint.yml)
 
-[![User Acceptance Testing](https://github.com/mi-sec/template-vue-dashboard/actions/workflows/user-acceptance-testing.yml/badge.svg)](https://github.com/mi-sec/template-vue-dashboard/actions/workflows/user-acceptance-testing.yml)
+[![User Acceptance Testing](https://github.com/iskore/chronoa/actions/workflows/user-acceptance-testing.yml/badge.svg)](https://github.com/iskore/chronoa/actions/workflows/user-acceptance-testing.yml)
 
-Template Vue.js Application
+Guides
 
 - [getting started](#getting-started)
     - [cloning and setup](#cloning-and-setup)
@@ -31,7 +31,7 @@ the following applications are required to run in `production`:
 
 ```
 # clone full-stack template
-git clone git@github.com:mi-sec/template-vue-dashboard.git
+git clone git@github.com:iskore/chronoa.git
 cd template-vue-dashboard/
 ```
 
