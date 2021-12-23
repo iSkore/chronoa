@@ -59,7 +59,6 @@ export default {
                 return this.vCycle;
             },
             set cycle( val ) {
-                console.log( 'val', val );
                 this.vCycle = val;
             }
         };

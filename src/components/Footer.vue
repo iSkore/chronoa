@@ -40,9 +40,6 @@ export default {
             repoUrl: process.env.VUE_APP_REPOSITORY || '/'
         };
     },
-    mounted() {
-        console.log( this.footer );
-    },
     computed: {
         ...mapState( [ 'footer' ] )
     },
