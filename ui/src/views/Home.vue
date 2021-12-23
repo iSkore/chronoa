@@ -52,7 +52,16 @@ export default {
     components: { StopWatchTimer },
     data() {
         return {
-            cycle: false
+            // selectedComponent
+            // cycle: false
+            vCycle: false,
+            get cycle() {
+                return this.vCycle;
+            },
+            set cycle( val ) {
+                console.log( 'val', val );
+                this.vCycle = val;
+            }
         };
     },
     mounted() {

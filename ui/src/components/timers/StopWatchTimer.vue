@@ -7,33 +7,25 @@
 </template>
 
 <script>
-import moment           from 'moment';
 import { mapMutations } from 'vuex';
+import TimerMixin       from '../mixins/TimerMixin';
 
 export default {
-    name: 'CountDownTimer',
+    name: 'StopWatchTimer',
+    mixins: [ TimerMixin ],
     data() {
         return {
-            initialTimeStamp: Date.now(),
-            deltaTimeStamp: 0
+            id: 'StopWatchTimer'
         };
     },
     mounted() {
-        // TODO::: SWITCH RUNNING TO AN ENUM SO TIME CAN BE RESET?
         this.registerSubscriber( ( time, running ) => {
+            // TODO::: Still need to implement reset
             if ( running ) {
-                this.deltaTimeStamp += ( this.$store.state.globalTimeIntervalMilliseconds / 1000 );
+                // this.increment( this.$store.state.globalTimeIntervalMilliseconds / 1000 );
+                this.increment( this.$store.state.globalTimeIntervalMilliseconds );
             }
         } );
-    },
-    computed: {
-        time() {
-            return moment()
-                .hour( 0 )
-                .minute( 0 )
-                .second( this.deltaTimeStamp )
-                .format( 'HH:mm:ss' );
-        }
     },
     methods: {
         ...mapMutations( [ 'registerSubscriber' ] )
