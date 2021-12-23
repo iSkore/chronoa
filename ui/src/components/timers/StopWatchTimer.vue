@@ -15,23 +15,24 @@ export default {
     data() {
         return {
             initialTimeStamp: Date.now(),
-            deltaTimeStamp: Date.now()
+            deltaTimeStamp: 0
         };
     },
     mounted() {
+        // TODO::: SWITCH RUNNING TO AN ENUM SO TIME CAN BE RESET?
         this.registerSubscriber( ( time, running ) => {
             if ( running ) {
-                console.log( this.initialTimeStamp, time );
-                // this.deltaTimeStamp += ;
-                // 1639260450294
-                // 1639260472314
+                this.deltaTimeStamp += ( this.$store.state.globalTimeIntervalMilliseconds / 1000 );
             }
         } );
     },
     computed: {
         time() {
-            // moment().hour(0).minute(0).second(counter++).format('HH : mm : ss');
-            return moment( this.deltaTimeStamp ).format( 'HH:mm:ss' );
+            return moment()
+                .hour( 0 )
+                .minute( 0 )
+                .second( this.deltaTimeStamp )
+                .format( 'HH:mm:ss' );
         }
     },
     methods: {

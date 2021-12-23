@@ -12,6 +12,13 @@ export default {
         }
     },
 
+    initiateGlobalTimeInterval( state ) {
+        state.globalTimeInterval = setInterval( () => {
+            state.globalTime = Date.now();
+            this.commit( 'updateTime', state.globalTime );
+        }, state.globalTimeIntervalMilliseconds );
+    },
+
     updateTime( state, time ) {
         const subscribedMethods = state.subscribedMethods;
         for ( let i = 0; i < subscribedMethods.length; i++ ) {

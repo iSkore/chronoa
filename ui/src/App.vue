@@ -40,15 +40,11 @@ export default {
     },
     async mounted() {
         await this.getConfig();
-
-        this.$store.state.globalTimeInterval = setInterval( () => {
-            this.$store.state.globalTime = Date.now();
-            this.updateTime( this.$store.state.globalTime );
-        }, this.$store.state.globalTimeIntervalMilliseconds );
+        this.initiateGlobalTimeInterval();
     },
     methods: {
         ...mapActions( [ 'getConfig' ] ),
-        ...mapMutations( [ 'updateTime' ] )
+        ...mapMutations( [ 'initiateGlobalTimeInterval' ] )
     }
 };
 </script>
