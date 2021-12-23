@@ -2,6 +2,7 @@
     <v-footer
         class="pt-0 pb-0"
         height="64"
+        fixed
     >
         <v-row>
             <v-col cols="2">

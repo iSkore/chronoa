@@ -4,6 +4,8 @@ export default {
     },
 
     switchTimer( state, override = null ) {
+
+        // TODO: Need to think about how this is going to work with respect to selectedComponent
         if ( override !== null ) {
             state.timeRunning = override;
         }
@@ -28,6 +30,10 @@ export default {
 
     registerSubscriber( state, subscriber = () => {} ) {
         state.subscribedMethods.push( subscriber );
+    },
+
+    setSelectedComponent( state, component ) {
+        state.selectedComponent = component;
     },
 
     playSound( state, name ) {
