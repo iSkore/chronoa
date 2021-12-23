@@ -10,7 +10,7 @@
                     show-arrows-on-hover
                     hide-delimiter-background
                     delimiter-icon="mdi-minus"
-                    height="360"
+                    height="40vh"
                 >
                     <v-carousel-item>
                         <v-sheet height="100%" tile>
