@@ -1,7 +1,6 @@
 <template>
     <v-system-bar
-        window
-        height="30"
+        :height="height"
         color="primary"
     >
         <v-row>
@@ -16,7 +15,7 @@
 
             <v-col cols="1">
                 <v-btn
-                    height="30"
+                    :height="height"
                     width="30"
                     tile icon x-small
                     aria-label="invert-colors"
@@ -27,7 +26,7 @@
             </v-col>
             <v-col cols="2">
                 <v-btn
-                    height="30"
+                    :height="height"
                     width="30"
                     tile icon x-small
                     aria-label="app-version"
@@ -48,6 +47,7 @@ export default {
     name: 'SystemBar',
     data() {
         return {
+            height: '30',
             version: `v${ process.env.VUE_APP_VERSION }`,
             repoUrl: process.env.VUE_APP_REPOSITORY || '/'
         };

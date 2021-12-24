@@ -1,20 +1,12 @@
-import moment from 'moment';
-
 export default {
     data: () => ( {
+        timeRunning: false,
         initialTimeStamp: Date.now(),
         deltaTimeStamp: 0
     } ),
     computed: {
         time() {
-            let time = moment( this.deltaTimeStamp )
-                // .hour( 0 )
-                // .minute( 0 )
-                // .second( this.deltaTimeStamp )
-                // .format( 'HH:mm:ss' );
-                .format( 'mm:ss:SS' );
-
-            return time;
+            return this.deltaTimeStamp;
         }
     },
     methods: {
