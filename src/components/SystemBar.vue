@@ -2,6 +2,7 @@
     <v-system-bar
         :height="height"
         color="primary"
+        app
     >
         <v-row>
             <v-col
@@ -59,7 +60,7 @@ export default {
         }
     },
     methods: {
-        ...mapMutations( [ 'switchTimer' ] )
+        ...mapMutations( [ 'toggleTimeRunning' ] )
     }
 };
 </script>

@@ -8,6 +8,7 @@
             </v-container>
         </v-main>
 
+        <SettingsSheet/>
         <Footer/>
     </v-app>
 </template>
@@ -15,13 +16,15 @@
 <script>
 import { mapActions, mapMutations } from 'vuex';
 
-import SystemBar from './components/SystemBar';
-import Footer    from './components/Footer';
+import SystemBar     from './components/SystemBar';
+import SettingsSheet from './components/SettingsSheet';
+import Footer        from './components/Footer';
 
 export default {
     name: 'App',
     components: {
         SystemBar,
+        SettingsSheet,
         Footer
     },
     metaInfo() {
@@ -36,6 +39,7 @@ export default {
     beforeCreate() {
         this.$installAudio();
         this.$installAxios();
+        this.$installEvents();
         this.$installLogger();
     },
     async mounted() {

@@ -3,15 +3,20 @@ export default {
         Object.assign( state, config );
     },
 
-    switchTimer( state, override = null ) {
-
-        // TODO: Need to think about how this is going to work with respect to selectedComponent
+    toggleTimeRunning( state, override = null ) {
         if ( override !== null ) {
-            state.timeRunning = override;
+            state.globalTimeRunning = override;
         }
         else {
-            state.timeRunning = !state.timeRunning;
+            state.globalTimeRunning = !state.globalTimeRunning;
         }
+
+        this.$eventBus.emit( `globalTimeChanged.${ state.activeTimerComponent }`, state.globalTimeRunning );
+    },
+
+    resetTime( state ) {
+        this.commit( 'toggleTimeRunning', false );
+        this.$eventBus.emit( `resetTime.${ state.activeTimerComponent }` );
     },
 
     initiateGlobalTimeInterval( state ) {
@@ -24,7 +29,7 @@ export default {
     updateTime( state, time ) {
         const subscribedMethods = state.subscribedMethods;
         for ( let i = 0; i < subscribedMethods.length; i++ ) {
-            subscribedMethods[ i ]( time, state.timeRunning );
+            subscribedMethods[ i ]( time );
         }
     },
 

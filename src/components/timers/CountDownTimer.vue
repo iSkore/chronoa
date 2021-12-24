@@ -10,11 +10,11 @@
 
 <script>
 import { mapMutations } from 'vuex';
-import TimerMixin       from '../mixins/TimerMixin';
 
+// TODO:: Use steppers to make a super customizable option (https://vuetifyjs.com/en/components/steppers/)
+// TODO:: Have quick select options (EMOM, EMOM with rest, etc)
 export default {
     name: 'CountDownTimer',
-    mixins: [ TimerMixin ],
     data() {
         return {
             id: 'CountDownTimer'

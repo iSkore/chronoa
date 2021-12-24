@@ -1,14 +1,13 @@
 export default {
-    timeRunning: false,
-    selectedComponent: null,
+    globalTimeRunning: false,
+    activeTimerComponent: 1,
 
     globalTime: Date.now(),
     globalTimeInterval: null,
-    globalTimeIntervalMilliseconds: 50,
+    globalTimeIntervalMilliseconds: 10,
     subscribedMethods: [],
 
-    footer: {
-        inset: false,
-        height: 64
+    settingsSheet: {
+        model: false
     }
 };
