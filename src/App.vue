@@ -8,24 +8,21 @@
             </v-container>
         </v-main>
 
-        <SettingsSheet/>
-        <Footer/>
+        <Clock/>
     </v-app>
 </template>
 
 <script>
 import { mapActions, mapMutations } from 'vuex';
 
-import SystemBar     from './components/SystemBar';
-import SettingsSheet from './components/SettingsSheet';
-import Footer        from './components/Footer';
+import SystemBar from './components/SystemBar';
+import Clock     from './components/Clock';
 
 export default {
     name: 'App',
     components: {
         SystemBar,
-        SettingsSheet,
-        Footer
+        Clock
     },
     metaInfo() {
         return {

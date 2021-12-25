@@ -7,6 +7,10 @@ export default {
     globalTimeIntervalMilliseconds: 10,
     subscribedMethods: [],
 
+    clock: {
+        open: false
+    },
+
     settingsSheet: {
         model: false
     }
