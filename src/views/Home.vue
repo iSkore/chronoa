@@ -1,12 +1,12 @@
 <template>
     <v-carousel
         v-model="$store.state.activeTimerComponent"
-        show-arrows-on-hover
+        :show-arrows="false"
         hide-delimiter-background
         delimiter-icon="mdi-minus"
     >
         <v-carousel-item>
-            <v-sheet height="100%" tile color="red">
+            <v-sheet height="100%" tile>
                 <v-row class="fill-height" align="center" justify="center">
                     <StopWatchTimer/>
                 </v-row>
@@ -14,9 +14,11 @@
         </v-carousel-item>
 
         <v-carousel-item>
-            <v-sheet height="100%" tile color="red">
+            <v-sheet height="100%" tile>
                 <v-row class="fill-height" align="center" justify="center">
-                    <CountDownTimer/>
+                    <v-col cols="12">
+                        <CustomTimer/>
+                    </v-col>
                 </v-row>
             </v-sheet>
         </v-carousel-item>
@@ -25,13 +27,13 @@
 
 <script>
 import StopWatchTimer from '../components/timers/StopWatchTimer';
-import CountDownTimer from '../components/timers/CountDownTimer';
+import CustomTimer    from '../components/timers/CustomTimer';
 
 export default {
     name: 'Home',
     components: {
         StopWatchTimer,
-        CountDownTimer
+        CustomTimer
     }
 };
 </script>

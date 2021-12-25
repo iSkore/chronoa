@@ -9,6 +9,7 @@ Vue.use( Vuetify );
 export default new Vuetify( {
     iconfont: 'mdi',
     theme: {
+        dark: true,
         themes: {
             light: {
                 primary: '#ff9800',
