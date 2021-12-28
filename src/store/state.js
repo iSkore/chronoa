@@ -12,6 +12,15 @@ export default {
         open: true,
         title: 'EMOM',
         description: 'Every Minute On the Minute',
+
+        phaseText: 'get ready',
+
+        time: '00:00:00',
+
+        sets: 0,
+        circut: 0,
+        totalTime: '00:00:00',
+
         timeRunning: false,
         deltaTimeStamp: 0
     },
