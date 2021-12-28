@@ -8,7 +8,12 @@ export default {
     subscribedMethods: [],
 
     clock: {
-        open: false
+        // open: false,
+        open: true,
+        title: 'EMOM',
+        description: 'Every Minute On the Minute',
+        timeRunning: false,
+        deltaTimeStamp: 0
     },
 
     settingsSheet: {

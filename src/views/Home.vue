@@ -7,6 +7,8 @@
             <v-stepper-step
                 :complete="step > 1"
                 step="1"
+                editable
+                @click="resetStepper()"
             >
                 Select timer type
             </v-stepper-step>
@@ -101,6 +103,10 @@ export default {
         };
     },
     methods: {
+        resetStepper() {
+            this.step     = 1;
+            this.complete = false;
+        },
         completeWithInstructions( title, subtitle ) {
             this.step                  = 'Go!';
             this.complete              = true;
