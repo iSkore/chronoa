@@ -9,8 +9,8 @@ module.exports = {
         'plugin:vue/essential'
     ],
 
+    parser: 'vue-eslint-parser',
     parserOptions: {
-        parser: 'babel-eslint',
         ecmaVersion: 12,
         sourceType: 'module'
     },
@@ -294,6 +294,7 @@ module.exports = {
             ],
             rules: {
                 indent: 'off',
+                'vue/multi-word-component-names': 'off',
                 'vue/script-indent': [
                     'warn',
                     4,
